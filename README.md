@@ -1,9 +1,10 @@
 # DOC 
-tech stack : laravel 10 + react js 3 inertia + tailwindcss 
+tech stack : laravel 10 + inertia react js  + tailwindcss 
 
 - react component bisa didapatkan di [material ui](https://mui.com/)
-- dokumentasi laravel berada di [laravel](laravelcom)
-- dokumentasi inertia js berada di [inertia js](inertiajs.com)
+- dokumentasi laravel berada di [laravel](https://laravel.com/)
+- dokumentasi inertia js berada di [inertia js](https://inertiajs.com/)
+- dokumentasi tailwind berada di [tailwind](https://tailwindcss.com/)
 
 # Cara Menjalankan Program
 install composer untuk laravel 
