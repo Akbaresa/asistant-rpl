@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Template extends Model
 {
     use HasFactory;
-    protected $table = 'template';
+    protected $table = 'template_praktikum';
     protected $hidden = ['id'];
 }

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Penilaian;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,10 @@ class PenilaianSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Penilaian::insert([
+            [
+                'id_praktikan'
+            ]
+        ]);
     }
 }
