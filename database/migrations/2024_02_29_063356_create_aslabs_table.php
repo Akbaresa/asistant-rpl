@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('nama');
             $table->string('npm')->unique();
             $table->string('email')->unique();
-            $table->string('password')->unique();
-            $table->string('status')->unique();
+            $table->string('no_wa')->unique();
+            $table->string('password');
             $table->foreignId('id_role_aslab');
-            $table->enum('status', ['aktif', 'tidak'])->default('tidak');
+            $table->enum('status_aktif', ['aktif', 'tidak'])->default('tidak');
             $table->timestamps();
         });
     }

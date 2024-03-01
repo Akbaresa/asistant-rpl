@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('template', function (Blueprint $table) {
-            $table->bigIncrements('id_template')->startingValue(1000);
-            $table->foreignId('id_sesi');
-            $table->string('path');
+        Schema::create('soal_praktikum', function (Blueprint $table) {
+            $table->bigIncrements('id_soal_praktikum')->startingValue(1000);
+            $table->foreignId('id_kegiatan_praktikum');
+            $table->string('path_soal_praktikum')->unique();
+            $table->string('kode_soal_praktikum')->unique();
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('template');
+        Schema::dropIfExists('soal');
     }
 };

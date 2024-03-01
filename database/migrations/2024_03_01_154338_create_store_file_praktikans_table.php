@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pertemuan', function (Blueprint $table) {
-            $table->bigIncrements('id_pertemuan')->startingValue(1000);
-            $table->string('no_pertemuan');
-            $table->foreignId('id_praktikum');
-            $table->enum('status_aktif', ['aktif', 'tidak'])->default('tidak');
+        Schema::create('store_file_praktikan', function (Blueprint $table) {
+            $table->bigIncrements('id_store_file_praktikan');
+            $table->string('path_file_praktikan')->unique()->nullable();
+            $table->foreignId('id_kegiatan_praktikum')->nullable();
+            $table->foreignId('id_file_tugas')->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pertemuan');
+        Schema::dropIfExists('store_file_praktikan');
     }
 };

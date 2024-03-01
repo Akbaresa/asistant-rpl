@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pertemuan_sesi', function (Blueprint $table) {
-            $table->bigIncrements('id_pertemuan_sesi')->startingValue(1000);
-            $table->foreignId('id_pertemuan');
-            $table->foreignId('id_sesi');
-            $table->enum('status', ['aktif', 'tidak'])->default('tidak');
+        Schema::create('template_praktikum', function (Blueprint $table) {
+            $table->bigIncrements('id_template_praktikum')->startingValue(1000);
+            $table->foreignId('id_kegiatan_praktikum');
+            $table->string('path_template_praktikum')->unique();
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pertemuan_sesi');
+        Schema::dropIfExists('template');
     }
 };

@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('file_tugas', function (Blueprint $table) {
             $table->bigIncrements('id_file_tugas')->startingValue(1000);
-            $table->string('path');
+            $table->foreignId('id_pertemuan');
+            $table->foreignId('id_jenis_tugas');
+            $table->string('path_file_tugas')->unique();
             $table->timestamps();
         });
     }

@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('sesi', function (Blueprint $table) {
             $table->bigIncrements('id_sesi')->startingValue(1000);
             $table->string('no_sesi');
-            $table->timestamp('waktu_mulai');
-            $table->timestamp('waktu_selesai');
+            $table->time('waktu_mulai');
+            $table->time('waktu_selesai');
             $table->string('note')->nullable();
             $table->timestamps();
         });

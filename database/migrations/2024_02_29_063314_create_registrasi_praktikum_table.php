@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('praktikan_praktikum', function (Blueprint $table) {
-            $table->bigIncrements('id_praktikan_praktikum')->startingValue(1000);
+        Schema::create('registrasi_praktikum', function (Blueprint $table) {
+            $table->bigIncrements('id_registrasi_praktikum')->startingValue(1000);
             $table->foreignId('id_praktikan');
             $table->foreignId('id_praktikum');
             $table->foreignId('id_aslab')->nullable();
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('praktikan_praktikum');
+        Schema::dropIfExists('registrasi_praktikum');
     }
 };

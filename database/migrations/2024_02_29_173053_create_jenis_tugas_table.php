@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('jenis_tugas', function (Blueprint $table) {
             $table->bigIncrements('id_jenis_tugas')->startingValue(1000);
-            $table->foreignId('id_pertemuan');
             $table->string('nama_jenis_tugas');
             $table->timestamps();
         });

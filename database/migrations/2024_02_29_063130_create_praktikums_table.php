@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('praktikum', function (Blueprint $table) {
             $table->bigIncrements('id_praktikum')->startingValue(1000);
             $table->foreignId('id_jenis_praktikum');
-            $table->enum('status', ['aktif', 'tidak'])->default('tidak');
+            $table->string('tahun');
+            $table->enum('status_aktif', ['aktif', 'tidak'])->default('tidak');
             $table->enum('status_pendaftaran', ['aktif', 'tidak'])->default('tidak');
             $table->timestamps();
         });

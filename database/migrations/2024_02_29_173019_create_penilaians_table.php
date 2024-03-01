@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('penilaian', function (Blueprint $table) {
             $table->bigIncrements('id_penilaian')->startingValue(1000);
             $table->foreignId('id_praktikan');
-            $table->foreignId('id_jenis_tugas');
-            $table->string('path_tugas')->nullable();
+            $table->foreignId('id_store_file');
             $table->integer('nilai');
             $table->timestamps();
         });
