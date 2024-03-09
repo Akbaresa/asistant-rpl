@@ -10,4 +10,8 @@ class RoleAslab extends Model
     use HasFactory;
     protected $table = 'role_aslab';
     protected $hidden = ['id'];
+
+    public function aslab(){
+        return $this->hasOne(Aslab::class);
+    }
 }

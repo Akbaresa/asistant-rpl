@@ -10,4 +10,8 @@ class Sesi extends Model
     use HasFactory;
     protected $table = 'sesi';
     protected $hidden = ['id'];
+
+    public function kegiatanPraktikum(){
+        return $this->hasMany(KegiatanPraktikum::class);
+    }
 }

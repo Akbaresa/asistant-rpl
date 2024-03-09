@@ -13,4 +13,20 @@ class Praktikan extends Model implements AuthenticatableContract
     use Authenticatable;
     protected $table = 'praktikan';
     protected $hidden = ['id'];
+
+    public function registrasiPraktikum(){
+        return $this->hasMany(RegistrasiPraktikum::class);
+    }
+
+    public function profile(){
+        return $this->hasOne(Profile::class);
+    }
+
+    public function penilaian(){
+        return $this->hasMany(Penilaian::class);
+    }
+
+    public function pelanggaran(){
+        return $this->hasMany(Pelanggaran::class);
+    }
 }

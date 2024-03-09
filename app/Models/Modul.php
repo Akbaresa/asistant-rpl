@@ -10,4 +10,8 @@ class Modul extends Model
     use HasFactory;
     protected $table = 'modul';
     protected $hidden = ['id'];
+
+    public function pertemuanModul(){
+        return $this->hasMany(PertemuanModul::class);
+    }
 }

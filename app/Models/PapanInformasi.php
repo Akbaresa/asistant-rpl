@@ -10,4 +10,8 @@ class PapanInformasi extends Model
     use HasFactory;
     protected $table = 'papan_informasi';
     protected $hidden = ['id'];
+
+    public function praktikum(){
+        return $this->belongsTo(Praktikum::class);
+    }
 }

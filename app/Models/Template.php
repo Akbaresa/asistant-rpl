@@ -10,4 +10,8 @@ class Template extends Model
     use HasFactory;
     protected $table = 'template_praktikum';
     protected $hidden = ['id'];
+
+    public function kegiatanPraktikum(){
+        return $this->belongsTo(KegiatanPraktikum::class);
+    }
 }

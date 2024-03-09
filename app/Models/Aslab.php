@@ -14,4 +14,11 @@ class Aslab extends Model implements AuthenticatableContract
     protected $table = 'aslab';
     protected $hidden = ['id'];
 
+    public function registrasiPraktikum(){
+        return $this->hasMany(RegistrasiPraktikum::class);
+    }
+    
+    public function roleAslab(){
+        return $this->belongsTo(RoleAslab::class);
+    }
 }

@@ -10,4 +10,8 @@ class Profile extends Model
     use HasFactory;
     protected $table = 'profile';
     protected $hidden = ['id'];
+
+    public function praktikan(){
+        return $this->belongsTo(Praktikan::class);
+    }
 }

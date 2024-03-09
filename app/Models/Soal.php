@@ -10,4 +10,8 @@ class Soal extends Model
     use HasFactory;
     protected $table = 'soal_praktikum';
     protected $hidden = ['id'];
+
+    public function kegiatanPraktikum(){
+        return $this->belongsTo(KegiatanPraktikum::class);
+    }
 }

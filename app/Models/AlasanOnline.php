@@ -12,4 +12,7 @@ class AlasanOnline extends Model
     protected $table = 'alasan_online';
     protected $hidden = ['id'];
 
+    public function penilaian(){
+        return $this->belongsTo(Penilaian::class);
+    }
 }

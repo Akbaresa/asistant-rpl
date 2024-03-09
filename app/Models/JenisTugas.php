@@ -10,4 +10,8 @@ class JenisTugas extends Model
     use HasFactory;
     protected $table = 'jenis_tugas';
     protected $hidden = ['id'];
+
+    public function fileTugas(){
+        return $this->hasMany(FileTugas::class);
+    }
 }

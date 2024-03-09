@@ -10,4 +10,8 @@ class JenisPraktikum extends Model
     use HasFactory;
     protected $table = 'jenis_praktikum';
     protected $hidden = ['id'];
+
+    public function praktikum(){
+        return $this->hasMany(Praktikum::class);
+    }
 }

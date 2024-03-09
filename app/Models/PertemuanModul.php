@@ -10,4 +10,12 @@ class PertemuanModul extends Model
     use HasFactory;
     protected $table = 'pertemuan_modul';
     protected $hidden = ['id'];
+
+    public function modul(){
+        return $this->belongsTo(Modul::class);
+    }
+
+    public function pertemuan(){
+        return $this->belongsTo(Pertemuan::class);
+    }
 }
