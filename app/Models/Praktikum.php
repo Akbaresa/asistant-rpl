@@ -10,4 +10,5 @@ class Praktikum extends Model
     use HasFactory;
     protected $table = 'praktikum';
     protected $hidden = ['id'];
+    protected $guarded =  ['id'];
 }
