@@ -13,5 +13,6 @@ class Aslab extends Model implements AuthenticatableContract
     use Authenticatable;
     protected $table = 'aslab';
     protected $hidden = ['id'];
+    protected $guarded = ['id'];
 
 }

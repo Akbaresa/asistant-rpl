@@ -1,9 +1,9 @@
-# specification Register Praktikan API 
+# specification Register Praktikum API 
 
-## Register Praktikan
+## Register Praktikum
 ### Endpoint
 - Method: POST
-- Path: /api/RegisterPraktikan
+- Path: /api/RegisterPraktikum
 
 Request Headers 
 - Cookie : guard ('praktikan') [Mandatory]
@@ -35,16 +35,16 @@ constraint :
 }
 ```
 
-## Verifikasi Praktikan
+## Verifikasi Praktikum
 ### Endpoint
 - Method: PATCH
-- Path: /api/RegisterPraktikan
+- Path: /api/RegisterPraktikum
 
 Request Headers 
 - Cookie : guard ('admin') [Mandatory]
 
 #### Request Param key : 
-- id_praktikan : {id_praktikan}
+- id_registrasi_praktikum : {id_registrasi_praktikum}
 
 constraint :
 - `id_aslab adalah aslab praktikan saat menjalani praktikum`
